@@ -1,0 +1,9 @@
+name: HomeTeleporter
+main: HomeTP\HomeTP
+version: 1.0
+api: [1.0.0, 2.0.0, 3.0.0]
+commands:
+ home:
+  description: Teleports to your previously set home
+ sethome:
+  description: Sets your home

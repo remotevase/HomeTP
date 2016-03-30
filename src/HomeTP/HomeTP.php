@@ -49,7 +49,7 @@ class HomeTP extends PluginBase{
                 $this->getLogger()->info($sender->getName() . " has set their home in world " . $sender->getLevel()->getName());
             }else{
                 $sender->sendMessage(C::RED."Please run command in game.");
-                break:
+                break;
                  return true;
                 }
                 $sender->sendMessage(C::RED."That Command Does NOT Exist!")

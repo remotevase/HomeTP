@@ -51,9 +51,8 @@ class HomeTP extends PluginBase{
                 $sender->sendMessage(C::RED."Please run command in game.");
                 return true;
             $sender->sendMessage(C::RED."That Command Does NOT Exist!")
- -              break;
                 default:
- -                return false;
+                 return false;
                 }
             }
     }

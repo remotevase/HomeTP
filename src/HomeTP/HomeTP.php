@@ -48,14 +48,13 @@ class HomeTP extends PluginBase{
                 $sender->sendMessage(C::GREEN."Your home is set!");
                 $this->getLogger()->info($sender->getName() . " has set their home in world " . $sender->getLevel()->getName());
             }else{
-                $sender->sendMessage(C::RED."Please run command in game.");
-                break;
-                 return true;
+                    $sender->sendMessage(C::RED. "Please run command in game.");
+                    return true;
                 }
-                $sender->sendMessage(C::RED."That Command Does NOT Exist!")
-                default:
-                 return false;
-            }
+                break;
+            default:
+                return false;
+        }
     }
     public function onDisable(){
         $this->getLogger()->info(C::DARK_RED."HomeTeleporter has successfully Disabled!");

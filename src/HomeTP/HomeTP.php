@@ -19,7 +19,7 @@ class HomeTP extends PluginBase{
         $this->getLogger()->info(C::YELLOW."All homes have saved!");
     }
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){
-        switch(strtolower($command->getName)){
+        switch(strtolower($command->getName())){
             case "home":
             if($sender instanceof Player){
                 $home = $this->homeData->get($args[0]);

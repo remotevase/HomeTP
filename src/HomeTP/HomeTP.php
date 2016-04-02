@@ -34,7 +34,6 @@ class HomeTP extends PluginBase{
             break;
             case "sethome":
             if ($sender instanceof Player){
-                $position = new Vector3($s->x, $s->y, $s->z);
                 $x = $s->x;
                 $y = $s->y;
                 $z = $s->z;

@@ -45,7 +45,7 @@ class HomeTP extends PluginBase{
                     "z" => $z,
                     "world" => $level,
                 ));
-                $sender->sendMessage(C::GREEN."Your home is set at coordinates\n" . "X:" . Color::YELLOW . $x . Color::GREEN . "\nY:" . Color::YELLOW . $y . Color::GREEN . "\nZ:" . Color::YELLOW . $z . Color::GREEN . "\nUse /home < ". $args[0] ." > to teleport to this home!");
+                $sender->sendMessage(C::GREEN."Your home is set at coordinates\n" . "X:" . C::YELLOW . $x . C::GREEN . "\nY:" . C::YELLOW . $y . C::GREEN . "\nZ:" . C::YELLOW . $z . C::GREEN . "\nUse /home < ". $args[0] ." > to teleport to this home!");
                 $this->getLogger()->info($sender->getName() . " has set their home in world " . $sender->getLevel()->getName());
             }else{
                     $sender->sendMessage(C::RED. "Please run command in game.");

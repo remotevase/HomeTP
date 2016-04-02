@@ -34,9 +34,10 @@ class HomeTP extends PluginBase{
             break;
             case "sethome":
             if ($sender instanceof Player){
-                $x = $s->getX();
-                $y = $s->getZ();
-                $z = $s->getZ();
+                $position = new Vector3($s->x, $s->y, $s->z);
+                $x = $s->x;
+                $y = $s->y;
+                $z = $s->z;
                 $level = $s->getLevel();
                 // $args[0] is the Name of the house -> /sethome <name>
                 $this->homeData->set($args[0], array(
@@ -45,7 +46,7 @@ class HomeTP extends PluginBase{
                     "z" => $z,
                     "world" => $level,
                 ));
-                $sender->sendMessage(C::GREEN."Your home is set!");
+                $sender->sendMessage(C::GREEN."Your home is set at coordinates "\n X:" . Color::YELLOW . $x . Color::GREEN . "\n Y:" . Color::YELLOW . $y . Color::GREEN . "\n Z:" . Color::YELLOW . $z . Color::GREEN . "\n Use /home < ". $args[0] ." > to teleport to this home!");
                 $this->getLogger()->info($sender->getName() . " has set their home in world " . $sender->getLevel()->getName());
             }else{
                     $sender->sendMessage(C::RED. "Please run command in game.");

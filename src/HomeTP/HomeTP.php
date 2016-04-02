@@ -34,9 +34,9 @@ class HomeTP extends PluginBase{
             break;
             case "sethome":
             if ($sender instanceof Player){
-                $x = $sender->getX();
-                $y = $sender->getY();
-                $z = $sender->getZ();
+                $x = $sender->x();
+                $y = $sender->y();
+                $z = $sender->z();
                 $level = $sender->getLevel();
                 // $args[0] is the Name of the house -> /sethome <name>
                 $this->homeData->set($args[0], array(

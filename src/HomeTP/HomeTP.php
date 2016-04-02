@@ -24,8 +24,8 @@ class HomeTP extends PluginBase{
             if($sender instanceof Player){
                 $home = $this->homeData->get($args[0]);
                 if($home["world"] instanceof Level){
-                    $s->setLevel($home["world"]);
-                    $s->teleport(new Position($home["x"], $home["y"], $home["z"]));
+                    $sender->setLevel($home["world"]);
+                    $sender->teleport(new Position($home["x"], $home["y"], $home["z"]));
                     $sender->sendMessage(C::BLUE."You teleported home.");
                 }else{
                     $sender->sendMessage(C::RED."That world is not loaded or Doesn't Exist!");
@@ -34,10 +34,10 @@ class HomeTP extends PluginBase{
             break;
             case "sethome":
             if ($sender instanceof Player){
-                $x = $s->x;
-                $y = $s->y;
-                $z = $s->z;
-                $level = $s->getLevel();
+                $x = $sender->x;
+                $y = $sender->y;
+                $z = $sender->z;
+                $level = $sender->getLevel();
                 // $args[0] is the Name of the house -> /sethome <name>
                 $this->homeData->set($args[0], array(
                     "x" => $x,

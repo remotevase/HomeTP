@@ -15,7 +15,7 @@ class HomeTP extends PluginBase{
         $this->saveResource("homes.yml");
         @mkdir($this->getDataFolder());
         $this->homeData = new Config($this->getDataFolder()."homes.yml", Config::YAML, array());
-        $this->getLogger()->info(C::GREEN."HomeTeleporter has successfully loaded!");
+        $this->getLogger()->info(C::GREEN."HomeTeleporter Version 2.0 has successfully loaded!");
         $this->getLogger()->info(C::YELLOW."All homes have saved!");
     }
     public function onCommand(CommandSender $sender, Command $command, $label, array $args){

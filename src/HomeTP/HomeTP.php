@@ -6,6 +6,7 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\Config;
 use pocketmine\level\{Position, Level};
 use pocketmine\utils\TextFormat as C;
+use pocketmine\math\Vector3;
 class HomeTP extends PluginBase{
     public $homeData;
     public function onEnable(){

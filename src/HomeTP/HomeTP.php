@@ -62,6 +62,19 @@ class HomeTP extends PluginBase{
             default:
                 return false;
         }
+        case "ishome":
+            if($sender instanceof Player){
+             if($event->getPlayer()->isOp()){
+                $home = $this->homeData->get($args[0]);
+                    $sender->sendMessage(C::BLUE."Yes," . $args[0] . "is a house. It's location is $home["x"] $home["y"] $home["z"]");
+                }else{
+                    $sender->sendMessage(C::RED."You must be an op to issue this command")
+                }else{
+                    $sender->sendMessage(C::RED. "Please run command in game.");
+                    return true;
+                }
+            }
+        }
     }
     public function onDisable(){
         $this->getLogger()->info(C::DARK_RED."HomeTeleporter has successfully Disabled!");

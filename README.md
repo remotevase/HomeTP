@@ -1,4 +1,4 @@
-**The source code is currently unstable (As of St. Patrick's Day 2016)**
+**The source code is currently unstable**
 This is a very simple plugin that teleports you to your house.
 
 **Commands and Usage**

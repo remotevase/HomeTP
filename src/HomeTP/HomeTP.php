@@ -32,7 +32,7 @@ class HomeTP extends PluginBase{
                 }else{
                     $sender->sendMessage(C::RED."That world is not loaded or Doesn't Exist!");
                 }else{
-                    $sender->sendMessage(C::RED."You must be an op to issue this command")
+                    $sender->sendMessage(C::RED."You must be an op to issue this command");
                 }
             }
             break;

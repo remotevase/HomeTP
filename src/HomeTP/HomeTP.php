@@ -78,7 +78,7 @@ class HomeTP extends PluginBase{
     }
     public function onDisable(){
         $this->getLogger()->info(C::DARK_RED."HomeTeleporter has successfully Disabled!");
-        $this->getLogger()->info(C::YELLOW."All homes have saved!");
         $this->saveResource("homes.yml");
+        $this->getLogger()->info(C::YELLOW."All homes have saved!");
     }
 }

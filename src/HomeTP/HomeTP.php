@@ -34,7 +34,8 @@ class HomeTP extends PluginBase{
                 }
                     $sender->sendMessage(C::RED."You must be an op to issue this command");
                 }
-                $sender->sendMessage(C::RED."Please run command in-game.")
+                $sender->sendMessage(C::RED."Please run command in-game.");
+            break;
             }
             case "sethome":
             if ($sender instanceof Player){
@@ -53,7 +54,7 @@ class HomeTP extends PluginBase{
                 $sender->sendMessage(C::GREEN."Your home is set at coordinates\n" . "X:" . C::YELLOW . $x . C::GREEN . "\nY:" . C::YELLOW . $y . C::GREEN . "\nZ:" . C::YELLOW . $z . C::GREEN . "\nUse /home < ". $args[0] ." > to teleport to this home!");
                 $this->getLogger()->info($sender->getName() . " has set their home in world " . $sender->getLevel()->getName());
             }
-                    $sender->sendMessage(C::RED."You must be an op to issue this command")
+                    $sender->sendMessage(C::RED."You must be an op to issue this command");
             }
                     $sender->sendMessage(C::RED. "Please run command in game.");
                     return true;

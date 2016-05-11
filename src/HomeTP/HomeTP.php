@@ -35,6 +35,7 @@ class HomeTP extends PluginBase{
                     $sender->sendMessage(C::RED."You must be an op to issue this command");
                 }
             break;
+            }
             case "sethome":
             if ($sender instanceof Player){
              if($event->getPlayer()->isOp()){

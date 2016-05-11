@@ -31,10 +31,9 @@ class HomeTP extends PluginBase{
                     $sender->sendMessage(C::BLUE."You teleported home.");
                 }else{
                     $sender->sendMessage(C::RED."That world is not loaded or Doesn't Exist!");
-                }else{
+                }
                     $sender->sendMessage(C::RED."You must be an op to issue this command");
                 }
-            }
             break;
             case "sethome":
             if ($sender instanceof Player){
@@ -54,10 +53,9 @@ class HomeTP extends PluginBase{
                 $this->getLogger()->info($sender->getName() . " has set their home in world " . $sender->getLevel()->getName());
             }else{
                     $sender->sendMessage(C::RED."You must be an op to issue this command")
-            }else{
+            }
                     $sender->sendMessage(C::RED. "Please run command in game.");
                     return true;
-                }
                 break;
             default:
                 return false;

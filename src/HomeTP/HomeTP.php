@@ -66,7 +66,7 @@ class HomeTP extends PluginBase{
                     if($home["world"] instanceof Level){
                         $sender->sendMessage(C::BLUE."Yes, " . $args[0] . "is a house. It's location is " . $home["x"] ." " . $home["y"] . " " . $home["z"]. "In the world " . $home["world"]);
                 }else{
-                    $sender->sendMessage(C::BLUE. "No, " . $args[0] . "is not a house. Use /sethome " . $args[0] . "to set a home with the name of " . $args[0]);
+                    $sender->sendMessage(C::BLUE. "No,-" . $args[0] . "is not a house. Use '/sethome'-'" . $args[0] . "' -to set a home with the name of-" . $args[0]);
                 }
             }
         }

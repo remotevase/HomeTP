@@ -1,6 +1,6 @@
 name: HomeTeleporter
 main: HomeTP\HomeTP
-version: 3.0
+version: 3.1
 api: [1.0.0, 2.0.0, 3.0.0]
 commands:
  home:
@@ -9,3 +9,6 @@ commands:
  sethome:
   description: Sets your home
   usage: /sethome <name>
+ ishome:
+  description: Checks if the home is set, and if not, brief instructions are provided on how to set the house with that name.
+  usage: /ishome <name>

@@ -70,7 +70,7 @@ class HomeTP extends PluginBase{
                 }else{
                     $sender->sendMessage(C::BLUE. "No," . $args[0] . "is not a house. Use /sethome" . $args[0] . "to set a home with the name of" . $args[0]);
                 }
-                    $sender->sendMessage(C::RED."You must be an op to issue this command")
+                    $sender->sendMessage(C::RED."You must be an op to issue this command");
                 }
                     $sender->sendMessage(C::RED. "Please run command in game.");
                     return true;

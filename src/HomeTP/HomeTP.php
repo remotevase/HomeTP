@@ -23,7 +23,7 @@ class HomeTP extends PluginBase{
         switch(strtolower($command->getName())){
             case "home":
             if($sender instanceof Player){
-             if($event->getPlayer()->isOp()){
+             if($sender->isOp()){
                 $home = $this->homeData->get($args[0]);
                 if($home["world"] instanceof Level){
                     $sender->setLevel($home["world"]);
@@ -34,11 +34,12 @@ class HomeTP extends PluginBase{
                 }
                     $sender->sendMessage(C::RED."You must be an op to issue this command");
                 }
+                $sender->sendMessage(C::RED."Please run command in-game.")
             break;
             }
             case "sethome":
             if ($sender instanceof Player){
-             if($event->getPlayer()->isOp()){
+             if($sender->isOp()){
                 $x = $sender->x;
                 $y = $sender->y;
                 $z = $sender->z;
@@ -52,7 +53,7 @@ class HomeTP extends PluginBase{
                 ));
                 $sender->sendMessage(C::GREEN."Your home is set at coordinates\n" . "X:" . C::YELLOW . $x . C::GREEN . "\nY:" . C::YELLOW . $y . C::GREEN . "\nZ:" . C::YELLOW . $z . C::GREEN . "\nUse /home < ". $args[0] ." > to teleport to this home!");
                 $this->getLogger()->info($sender->getName() . " has set their home in world " . $sender->getLevel()->getName());
-            }else{
+            }
                     $sender->sendMessage(C::RED."You must be an op to issue this command")
             }
                     $sender->sendMessage(C::RED. "Please run command in game.");
@@ -63,7 +64,7 @@ class HomeTP extends PluginBase{
         }
         case "ishome":
             if($sender instanceof Player){
-             if($event->getPlayer()->isOp()){
+             if($sender->isOp()){
                 $home = $this->homeData->get($args[0]);
                     $sender->sendMessage(C::BLUE."Yes," . $args[0] . "is a house. It's location is $home["x"] $home["y"] $home["z"]");
                 }else{

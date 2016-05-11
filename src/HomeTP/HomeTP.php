@@ -62,18 +62,11 @@ class HomeTP extends PluginBase{
             default:
                 return false;
         case "ishome":
-            if($sender instanceof Player){
-             if($sender->isOp()){
                 $home = $this->homeData->get($args[0]);
                     if($home["world"] instanceof Level){
                         $sender->sendMessage(C::BLUE."Yes," . $args[0] . "is a house. It's location is" . $home["x"] . $home["y"] . $home["z"]. "In the world" . $home["world"]);
                 }else{
                     $sender->sendMessage(C::BLUE. "No," . $args[0] . "is not a house. Use /sethome" . $args[0] . "to set a home with the name of" . $args[0]);
-                }
-                    $sender->sendMessage(C::RED."You must be an op to issue this command");
-                }
-                    $sender->sendMessage(C::RED. "Please run command in game.");
-                    return true;
                 }
             }
         }

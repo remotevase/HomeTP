@@ -61,7 +61,6 @@ class HomeTP extends PluginBase{
                 break;
             default:
                 return false;
-        }
         case "ishome":
             if($sender instanceof Player){
              if($sender->isOp()){
